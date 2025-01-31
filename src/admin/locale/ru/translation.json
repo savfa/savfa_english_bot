@@ -1,0 +1,128 @@
+{
+  "actions": {
+    "new": "Создать новый",
+    "edit": "Редактировать",
+    "show": "Показать",
+    "delete": "Удалить",
+    "bulkDelete": "Удалить все",
+    "list": "Список"
+  },
+  "buttons": {
+    "save": "Сохранить",
+    "addNewItem": "Добавить новый элемент",
+    "filter": "Фильтр",
+    "filterActive": "Фильтр ({{count}})",
+    "applyChanges": "Применить изменения",
+    "resetFilter": "Сбросить",
+    "confirmRemovalMany": "Подтвердите удаление {{count}} записи",
+    "confirmRemovalMany_plural": "Подтвердите удаление {{count}} записей",
+    "logout": "Выйти",
+    "login": "Войти",
+    "seeTheDocumentation": "См.: <1>документацию</1>",
+    "createFirstRecord": "Создать первую запись",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "contactUs": "Свяжитесь с нами"
+  },
+  "components": {
+    "DropZone": {
+      "placeholder": "Перетащите файл сюда или нажмите для выбора",
+      "acceptedSize": "Максимальный размер: {{maxSize}}",
+      "acceptedType": "Поддерживаемые типы: {{mimeTypes}}",
+      "unsupportedSize": "Файл {{fileName}} слишком большой",
+      "unsupportedType": "Файл {{fileName}} имеет неподдерживаемый тип: {{fileType}}"
+    },
+    "LanguageSelector": {
+      "availableLanguages": {
+        "de": "Немецкий",
+        "en": "Английский",
+        "es": "Испанский",
+        "it": "Итальянский",
+        "ja": "Японский",
+        "pl": "Польский",
+        "pt-BR": "Португальский (Бразилия)",
+        "ua": "Украинский",
+        "zh-CN": "Китайский"
+      }
+    },
+    "Login": {
+      "welcomeHeader": "Добро пожаловать",
+      "welcomeMessage": "в AdminJS - ведущую открытую админ-панель для вашего приложения Node.js, которая позволяет управлять всеми данными в одном месте",
+      "properties": {
+        "email": "Email",
+        "password": "Пароль"
+      },
+      "loginButton": "Войти"
+    }
+  },
+  "labels": {
+    "navigation": "Навигация",
+    "pages": "Страницы",
+    "selectedRecords": "Выбрано ({{selected}})",
+    "filters": "Фильтры",
+    "adminVersion": "Админ: {{version}}",
+    "appVersion": "Приложение: {{version}}",
+    "dashboard": "Панель управления"
+  },
+  "properties": {
+    "length": "Длина",
+    "from": "От",
+    "to": "До"
+  },
+  "resources": {},
+  "messages": {
+    "successfullyBulkDeleted": "Успешно удалено {{count}} запись",
+    "successfullyBulkDeleted_plural": "Успешно удалено {{count}} записей",
+    "successfullyDeleted": "Успешно удалена данная запись",
+    "successfullyUpdated": "Успешно обновлена данная запись",
+    "thereWereValidationErrors": "Есть ошибки валидации - проверьте их ниже",
+    "forbiddenError": "Вы не можете выполнить действие {{actionName}} на {{resourceId}}",
+    "anyForbiddenError": "Вы не можете выполнить данное действие",
+    "successfullyCreated": "Успешно создана новая запись",
+    "bulkDeleteError": "Произошла ошибка при удалении записей. Подробности смотрите в консоли",
+    "errorFetchingRecords": "Произошла ошибка при получении записей. Подробности смотрите в консоли",
+    "errorFetchingRecord": "Произошла ошибка при получении записи. Подробности смотрите в консоли",
+    "noRecordsSelected": "Вы не выбрали ни одной записи",
+    "theseRecordsWillBeRemoved": "Следующая запись будет удалена",
+    "theseRecordsWillBeRemoved_plural": "Следующие записи будут удалены",
+    "pickSomeFirstToRemove": "Чтобы удалить записи, сначала выберите их",
+    "error404Resource": "Ресурс с данным id: {{resourceId}} не найден",
+    "error404Action": "Ресурс с данным id: {{resourceId}} не имеет действия с именем: {{actionName}} или вы не авторизованы для его использования!",
+    "error404Record": "Ресурс с данным id: {{resourceId}} не имеет записи с id: {{recordId}} или вы не авторизованы для его использования!",
+    "seeConsoleForMore": "См. консоль разработчика для получения дополнительных сведений...",
+    "noActionComponent": "Вы должны реализовать компонент действия для вашего действия",
+    "noRecordsInResource": "В этом ресурсе нет записей",
+    "noRecords": "Нет записей",
+    "confirmDelete": "Вы действительно хотите удалить этот элемент?",
+    "welcomeOnBoard_title": "Добро пожаловать на борт!",
+    "welcomeOnBoard_subtitle": "Теперь вы один из нас! Мы подготовили для вас несколько советов, чтобы начать:",
+    "addingResources_title": "Добавление ресурсов",
+    "addingResources_subtitle": "Узнайте, как добавлять новые ресурсы в боковую панель",
+    "customizeResources_title": "Настройка ресурсов",
+    "customizeResources_subtitle": "Определите поведение, свойства и многое другое...",
+    "customizeActions_title": "Настройка действий",
+    "customizeActions_subtitle": "Измените существующие действия или добавьте пользовательские",
+    "writeOwnComponents_title": "Написание компонентов",
+    "writeOwnComponents_subtitle": "Как изменить внешний вид AdminJS",
+    "customDashboard_title": "Пользовательская панель управления",
+    "customDashboard_subtitle": "Узнайте, как настроить домашнюю страницу AdminJS",
+    "roleBasedAccess_title": "Контроль доступа на основе ролей",
+    "roleBasedAccess_subtitle": "Определите права доступа для пользователей AdminJS",
+    "community_title": "Присоединяйтесь к сообществу Discord",
+    "community_subtitle": "Общайтесь с создателями AdminJS и другими пользователями AdminJS",
+    "foundBug_title": "Нашли баг? нужны улучшения?",
+    "foundBug_subtitle": "Создайте проблему в нашем репозитории GitHub",
+    "needMoreSolutions_title": "Нужны более продвинутые решения?",
+    "needMoreSolutions_subtitle": "Мы здесь, чтобы предоставить вам красивый UX/UI дизайн и программное обеспечение, разработанное на основе (не только) AdminJS",
+    "invalidCredentials": "Неверный email и/или пароль",
+    "keyPlaceholder": "КЛЮЧ",
+    "valuePlaceholder": "ЗНАЧЕНИЕ",
+    "initialKey": "Ключ-{{number}}",
+    "keyInUse": "Ключи объекта должны быть уникальными",
+    "keyValuePropertyDefaultDescription": "Все значения хранятся как текст. Ключи должны быть уникальными, дублирующиеся ключи не будут сохранены.",
+    "pageNotFound_title": "Страница не найдена",
+    "pageNotFound_subtitle": "Страница <strong>\"{{pageName}}\"</strong> не существует",
+    "componentNotFound_title": "Компонент не указан",
+    "componentNotFound_subtitle": "Вы должны указать компонент, который будет рендерить этот элемент"
+  }
+}
