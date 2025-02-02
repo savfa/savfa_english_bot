@@ -6,6 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix(`api`);
 
+  // config swagger
   const config = new DocumentBuilder()
     .setTitle('English bot api')
     .setDescription('The bot API description')
