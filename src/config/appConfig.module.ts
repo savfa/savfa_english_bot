@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import Joi from 'joi';
+import { DatabaseModule } from '../database/database.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import Joi from 'joi';
         COOKIE_SECRET: Joi.string().required(),
       }),
     }),
+    DatabaseModule,
   ],
 })
 export class AppConfigModule {}
