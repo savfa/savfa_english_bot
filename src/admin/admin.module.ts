@@ -2,31 +2,62 @@ import { DynamicModule } from '@nestjs/common';
 import { DEFAULT_ADMIN } from './constants';
 import translationsRu from './locale/ru/translation.json';
 import { User } from '../users/entities/user.entity';
-//import { createConnection } from 'typeorm';
 
 export async function createAdminModule(): Promise<DynamicModule> {
   const { AdminModule } = await import('@adminjs/nestjs');
-  const { DefaultAuthProvider, ComponentLoader } = await import('adminjs');
-  //const { Database, Resource } = await import('@adminjs/typeorm');
+  const { DefaultAuthProvider, ComponentLoader, AdminJS } = await import(
+    'adminjs'
+  );
+  const { Database, Resource } = await import('@adminjs/typeorm');
 
+  AdminJS.registerAdapter({ Database, Resource });
   const componentLoader = new ComponentLoader();
 
-  // Get the TypeORM connection
-  // const connection = await createConnection();
+  componentLoader.add(
+    `CustomPage`,
+    './components/CustomPage/CustomPage',
+    'add',
+  );
+
+  console.log(componentLoader.getComponents());
 
   return AdminModule.createAdminAsync({
     useFactory: async () => ({
       adminJsOptions: {
         componentLoader,
         rootPath: '/admin',
-        resources: [],
-        databases: [],
         locale: {
           language: 'ru',
           availableLanguages: ['en', 'ru'],
           localeDetection: true,
           translations: {
             ru: translationsRu,
+          },
+        },
+        resources: [
+          {
+            resource: User, // Подключаем сущность User в админку
+            options: {
+              properties: {
+                password: { isVisible: false }, // Скрываем пароль
+              },
+            },
+          },
+        ],
+        databases: [], // TypeORM автоматически подтянет
+        branding: {
+          logo: false,
+          companyName: 'English bot',
+          withMadeWithLove: false,
+        },
+        pages: {
+          'Кастомная страница': {
+            handler: async (request, response, context) => {
+              return {
+                text: 'I am fetched from the backend',
+              };
+            },
+            component: `CustomPage`,
           },
         },
       },
